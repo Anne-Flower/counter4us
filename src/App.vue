@@ -1,11 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import PointsCounter from './components/pointsCounter.vue'
+</script>
 
 <template>
-  <h1 class="bg-red-500">You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <div class="flex h-screen">
+    <PointsCounter color="green" class="p-4" />
+    <PointsCounter color="red" class="p-4" />
+  </div>
 </template>
 
 <style scoped></style>
