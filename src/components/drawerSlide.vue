@@ -1,4 +1,4 @@
-<template class="">
+<template>
   <button
     command="show-modal"
     commandfor="drawer"
