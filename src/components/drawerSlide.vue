@@ -1,0 +1,63 @@
+<template class="">
+  <button
+    command="show-modal"
+    commandfor="drawer"
+    class="w-full border rounded-md bg-gray-950/5 px-2.5 py-1.5 text-sm font-semibold text-gray-900 hover:bg-gray-950/10"
+  >
+    Settings
+  </button>
+  <el-dialog>
+    <dialog
+      id="drawer"
+      aria-labelledby="drawer-title"
+      class="fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent"
+    >
+      <el-dialog-backdrop
+        class="absolute inset-0 bg-gray-500/75 transition-opacity duration-500 ease-in-out data-closed:opacity-0"
+      ></el-dialog-backdrop>
+
+      <div tabindex="0" class="absolute inset-0 pl-10 focus:outline-none sm:pl-16">
+        <el-dialog-panel
+          class="group/dialog-panel relative ml-auto block size-full max-w-md transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700"
+        >
+          <!-- Close button, show/hide based on slide-over state. -->
+          <div
+            class="absolute top-0 left-0 -ml-8 flex pt-4 pr-2 duration-500 ease-in-out group-data-closed/dialog-panel:opacity-0 sm:-ml-10 sm:pr-4"
+          >
+            <button
+              type="button"
+              command="close"
+              commandfor="drawer"
+              class="relative rounded-md text-gray-300 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              <span class="absolute -inset-2.5"></span>
+              <span class="sr-only">Close panel</span>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                data-slot="icon"
+                aria-hidden="true"
+                class="size-6"
+              >
+                <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="relative flex h-full flex-col overflow-y-auto bg-white py-6 shadow-xl">
+            <div class="px-4 sm:px-6">
+              <h2 id="drawer-title" class="text-base font-semibold text-gray-900">Yours settings</h2>
+            </div>
+            <div class=" flex flex-col gap-2 relative mt-6 flex-1 px-4 sm:px-6">
+              <button>color</button>
+              <button>color</button>
+            </div>
+          </div>
+        </el-dialog-panel>
+      </div>
+    </dialog>
+  </el-dialog>
+</template>
+<style scoped></style>
